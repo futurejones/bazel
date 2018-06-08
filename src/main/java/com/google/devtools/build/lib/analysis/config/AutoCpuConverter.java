@@ -94,6 +94,8 @@ public class AutoCpuConverter implements Converter<String> {
       return Pair.of(CPU.PPC, OS.LINUX);
     } else if (input.equals("arm")) {
       return Pair.of(CPU.ARM, OS.LINUX);
+    } else if (input.equals("aarch64")) {
+      return Pair.of(CPU.AARCH64, OS.LINUX);
     } else if (input.equals("s390x")) {
       return Pair.of(CPU.S390X, OS.LINUX);
     }
