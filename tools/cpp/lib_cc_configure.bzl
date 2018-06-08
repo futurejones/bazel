@@ -188,7 +188,7 @@ def get_cpu_value(repository_ctx):
     result = repository_ctx.execute(["uname", "-m"])
     if result.stdout.strip() in ["power", "ppc64le", "ppc", "ppc64"]:
         return "ppc"
-    if result.stdout.strip() in ["arm", "armv7l", "aarch64"]:
+    if result.stdout.strip() in ["arm", "armv7l"]:
         return "arm"
     return "k8" if result.stdout.strip() in ["amd64", "x86_64", "x64"] else "piii"
 
